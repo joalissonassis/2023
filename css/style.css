@@ -1,0 +1,937 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Courier New', Courier, monospace; */
+}
+
+body,
+html {
+  height: 100%;
+  background-color: #f8f9fa;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0077c7c7;
+  border-radius: 40px;
+}
+
+*::selection {
+  background-color: rgba(0, 129, 129, 0.788);
+  color: black;
+}
+
+/* .topo{
+  width: 100%;
+  height: auto;
+  background-color: #000000;
+  color: whitesmoke;
+  position: fixed;
+  z-index: 99;
+} */
+header {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  /* border: 3px solid red; */
+  /* background-image: url(/imagens/bg2.jpg); */
+  /* background-size: cover; */
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  z-index: 999999;
+  font-family: 'Phudu', cursive;
+  /* border: 2px solid red; */
+}
+
+/* menu */
+.menu-logo {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  height: auto;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.479);
+  padding: 3px;
+  z-index: 9;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.0);
+
+}
+
+.flex-1 {
+  /* display: flex;
+  justify-content: space-evenly;
+  align-items: center; */
+  background-color: rgba(255, 255, 255, 0.185);
+  backdrop-filter: blur(1px);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  /* width: 80%; */
+  /* border-top: 1px solid rgb(0, 0, 0); */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.0);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.midia {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.midia i {
+  margin-left: 10px;
+  padding: 3px;
+}
+
+.midia i:hover {
+  color: white;
+}
+
+.logo a {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-image: linear-gradient(to right, #00ccff, #e9e9e9);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu li a:hover {
+  color: black;
+  transition: 0.3s;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* fim do menu */
+
+section.sobre {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  padding: 20px;
+  background-color: #f8f9fa;
+  overflow: hidden;
+
+}
+
+.sobre1,
+.sobre2 {
+  min-width: 50%;
+  /* border: 1px solid red; */
+  padding: 10px;
+}
+
+.sobre1 {
+  padding: 60px;
+}
+
+.sobre1 h1 {
+  font-size: 45px;
+  text-align: center;
+  padding: 10px;
+}
+
+.sobre1 P {
+  font-size: 20px;
+  text-align: justify;
+  letter-spacing: normal;
+  line-height: 24px;
+
+}
+
+.sobre2 {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../imagens/img.jpg);
+  transition: transform 0.1s ease;
+  overflow: hidden;
+}
+
+.sobre2:hover {
+  transform: scale(1.1);
+}
+
+/* princípios */
+section.principios {
+  padding: 10px;
+  width: 100%;
+  min-height: 500px;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+section.principios h1 {
+  padding: 10px;
+  font-size: 45px;
+  text-align: center;
+}
+
+section.principios p {
+  text-align: center;
+  margin: 30px;
+  font-size: 20px;
+}
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 300px;
+  /* border: 2px solid pink; */
+  /* overflow: hidden; */
+}
+
+.item {
+  background-color: rgba(255, 255, 255, 0.034);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), -2px -2px 5px rgba(255, 255, 255, 0.5);
+  color: #333;
+  border-radius: 5px;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  min-height: 300px;
+  transition: transform 0.1s ease;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+.item p {
+  color: #313131;
+  text-align: justify;
+  font-size: 18px;
+}
+
+/* fim princípios */
+
+
+section.frota {
+  padding: 10px;
+  width: 100%;
+  min-height: 300px;
+  background-color: #f0f0f0;
+}
+
+section.frota h2 {
+  padding: 10px;
+  font-size: 45px;
+  text-align: center;
+}
+
+button.btnmodal {
+  width: 80%;
+  min-height: 60px;
+  display: inline-block;
+  text-align: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0077c7c7;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+button.btnmodal:hover {
+  background-color: #0062cc;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.boxbtn {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Estilo do modal */
+.modal {
+  transition: 3s;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo do conteúdo do modal */
+.modal-content {
+  transition: 0.4s;
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 90%;
+}
+
+/* Estilo do botão de fechar */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* modal interno */
+
+.container-modal {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid red; */
+  margin: 20px;
+}
+
+.box-modal {
+  width: 45%;
+  min-height: 100px;
+  color: black;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 17, 255, 0.123);
+}
+
+p.p-modal {
+  letter-spacing: normal;
+  line-height: 24px;
+  text-align: justify;
+  padding: 10px;
+
+}
+
+/* fim modal interno */
+/* icones-frota */
+
+.icones-frota {
+  display: flex;
+  width: 100%;
+  /* border:1px solid red; */
+  min-height: 100px;
+  justify-content: center;
+}
+
+.container-icones {
+  width: 80%;
+  /* border: 1px solid purple; */
+  display: flex;
+  justify-content: center;
+}
+
+.container-icones i {
+  font-size: 40px;
+  padding: 20px;
+  margin-left: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.137);
+  display: flex;
+  align-items: center;
+  border-radius: 200%;
+}
+
+.container-icones i:hover {
+  background-color: #888;
+  cursor: pointer;
+}
+
+
+/* fim icones-frota */
+
+
+
+
+
+/* nossos serviços */
+
+section.nossos-servicos {
+  padding: 30px;
+  width: 100%;
+  min-height: 700px;
+  /* background-color: #f8f9fa; */
+  background-image: url(../imagens/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+section.nossos-servicos h1 {
+  padding: 20px;
+  font-size: 40px;
+  text-align: center;
+}
+
+section.nossos-servicos h1::selection {
+  background-color: black;
+  color: #0062cc;
+}
+
+section.nossos-servicos p {
+  text-align: center;
+  margin: 30px;
+  font-size: 22px;
+  padding: 20px;
+}
+
+section.nossos-servicos p::selection {
+  background-color: black;
+  color: #0062cc;
+}
+
+.container-nossos-servicos {
+  display: flex;
+  width: 100%;
+  background-color: #888888e3;
+  transition: 0.5s;
+  /* border: 1px solid red; */
+}
+
+.item-nossos-servicos:hover {
+  background-color: black;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.item-nossos-servicos {
+  max-width: 33.3%;
+  min-height: 80px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.185);
+  text-align: center;
+  padding: 20px;
+}
+
+.item-nossos-servicos i {
+  font-size: 40px;
+  padding: 3px;
+}
+
+.item-nossos-servicos span {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.bg-nossos-servicos {
+  width: 100%;
+  color: #f8f9fa;
+  background-color: #00000096;
+}
+
+/* fim nossos serviços */
+
+/* cotação */
+section.cotacao {
+  width: 100%;
+  min-height: 600px;
+  background-color: #222735;
+  color: whitesmoke;
+}
+
+/* fim cotação */
+
+/* formulário de contato*/
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #3e8e41;
+}
+
+
+/* fim formulário */
+
+
+
+/* cotação*/
+
+section.cotacao h1 {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+section.cotacao p {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* fim cotação*/
+
+
+
+
+
+/* footer */
+
+
+.footer {
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li {
+  padding: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+footer ul li:hover {
+  color: #0062cc;
+  border-bottom: 1px solid black;
+}
+
+div.copy {
+  text-align: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* usando medias queries para se adaptar a telas menores */
+
+/* menu */
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    background-color: #000000;
+    height: 100vh;
+    /* border:1px solid red; */
+  }
+
+  header {
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid yellow; */
+  }
+
+  video {
+    display: block;
+  }
+
+  .sobre {
+    width: 100% !important;
+    padding: 0;
+    height: auto;
+    flex-direction: column;
+    /* border: 2px solid purple; */
+  }
+
+  .sobre1 {
+    width: 100% !important;
+    /* border:1px solid red; */
+  }
+
+  .sobre2 {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 200px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 300px;
+    flex-direction: column;
+    /* border: 2px solid pink; */
+    /* overflow: hidden; */
+  }
+
+  .item {
+    background-color: rgba(255, 255, 255, 0.034);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), -2px -2px 5px rgba(255, 255, 255, 0.5);
+    color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+  }
+
+  .icones-frota {
+    display: none;
+  }
+
+  .container-modal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    align-items: center;
+    margin: 20px;
+  }
+
+  .box-modal {
+    width: 100%;
+    min-height: 100px;
+    color: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 17, 255, 0.123);
+  }
+
+  .container-nossos-servicos {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+  }
+
+  .item-nossos-servicos {
+    max-width: 100%;
+    min-height: 80px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.185);
+    text-align: center;
+    padding: 20px;
+  }
+
+  .cotacao {
+    padding: 20px;
+  }
+
+  button.form {
+    width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 20px;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .toggle {
+    display: block;
+  }
+}
+
+/* fim menu */
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+
+
+  .header {
+    width: 100%;
+    background-color: #000000;
+    height: 100vh;
+    /* border:1px solid red; */
+  }
+
+  header {
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid yellow; */
+  }
+
+  video {
+    display: block;
+  }
+
+  .sobre {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 0 !important;
+    /* border: 2px solid purple; */
+    /* background-color:antiquewhite !important; */
+  }
+
+  .sobre1 {
+    height: auto;
+    width: 100% !important;
+    padding: 10px !important;
+    /* line-height: 15px; */
+
+  }
+
+  .sobre1 h1 {
+    display: inline-block;
+    /* border: 1px solid green; */
+    width: 100%;
+
+  }
+
+  .sobre1 P {
+    font-size: 20px;
+    /* text-align: justify; */
+    letter-spacing: normal;
+    line-height: 25px;
+    /* border: 1px solid red; */
+
+  }
+
+  .sobre2 {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 200px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 300px;
+    flex-direction: column;
+    /* border: 2px solid pink; */
+    /* overflow: hidden; */
+  }
+
+  .item {
+    background-color: rgba(255, 255, 255, 0.034);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), -2px -2px 5px rgba(255, 255, 255, 0.5);
+    color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+  }
+
+  .icones-frota {
+    display: none;
+  }
+
+  .container-modal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    align-items: center;
+    margin: 20px;
+  }
+
+  .box-modal {
+    width: 100%;
+    min-height: 100px;
+    color: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 17, 255, 0.123);
+  }
+
+  .container-nossos-servicos {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+  }
+
+  .item-nossos-servicos {
+    max-width: 100%;
+    min-height: 80px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.185);
+    text-align: center;
+    padding: 20px;
+  }
+
+  .cotacao {
+    padding: 20px;
+  }
+
+  button.form {
+    width: 100%;
+  }
